@@ -15,15 +15,29 @@ POST   | /auth/login      | -     | user | User Login               | `email`, `
 
 METHOD | ENDPOINT         | TOKEN | ROLE | DESCRIPTION              | POST PARAMS                                     | RETURNS
 -------|------------------|-------|------|--------------------------|-------------------------------------------------|--------------------
-GET    | /user            | YES   | user | Get All Users            |  `query params`                            | [{user}]
+GET    | /user            | YES   | admin | Get All Users            |  `query params`                            | [{user}]
 GET    | /user/profile    | YES   | user | Get Own Profile          |                                                |  {user}
-GET    | /user/:userId        | YES   | user | Get One User             |                                             |  {user}
-POST   | /user            | YES   | admin | Create one user         | `userName`, `email`, `password`, `address`, `birthDate` , `phone`, `zipCode` | {user}
-PUT    | /user/profile    | YES   | user | Update own profile       | `userName`, `email`, `address`, `birthDate` , `phone`, `zipCode` | {message: 'Profile updated'}
+GET    | /user/:userId        | YES   | admin | Get One User             |                                             |  {user}
+POST   | /user            | YES   | admin | Create one user         |`firstName`,`lastName`, `email`, `password`, `phone`, `birth_Date` , `debut_date` | {user}
+PUT    | /user/profile    | YES   | user | Update own profile       |`firstName`,`lastName`, `email`, `password`, `phone`, `birth_Date` , `debut_date` | {message: 'Profile updated'}
 PUT    | /user/password   | YES   | user  | Reset password          | `newPassword` `repeatPassword`                                    | { message: 'Password updated }
-PUT    | /user/:userId       | YES   | admin | Update one user         |  `userName`, `email`, `address`, `birthDate` , `phone`, `zipCode` | {message: 'User updated'
+PUT    | /user/:userId       | YES   | admin | Update one user         |  `firstName`,`lastName`, `email`, `password`, `phone`, `birth_Date` , `debut_date` | {message: 'User updated'
 DELETE | /user/:userId      | YES   | admin | Delete one user         |                                                   | {message: 'User deleted'}
 DELETE | /user/profile    | YES   | user | Delete own profile       |                                                    | { message: 'Profile deleted' }
+
+### Medical Info Endpoints
+
+METHOD | ENDPOINT         | TOKEN | ROLE | DESCRIPTION              | POST PARAMS                                     | RETURNS
+-------|------------------|-------|------|--------------------------|-------------------------------------------------|--------------------
+GET    | /medical     | YES   | admin | Get All Users Medical Info           |  `query params`                            | [{user}]
+GET    | /medical/profile    | YES   | user | Get Own Medical Info         |                                                |  {user}
+GET    | /medical/:userId        | YES   | admin | Get One User Medical Info            |                                             |  {user}
+POST   | /medical            | YES   | user | Create one user Medical Info        |`firstName`,`lastName`, `email`, `password`, `phone`, `birth_Date` , `debut_date` | {user}
+PUT    | /medical/profile    | YES   | user | Update own Medical Info       |`firstName`,`lastName`, `email`, `password`, `phone`, `birth_Date` , `debut_date` | {message: 'Medical Info updated'}
+PUT    | /medical/:userId       | YES   | admin | Update one user Medical Info       |  `firstName`,`lastName`, `email`, `password`, `phone`, `birth_Date` , `debut_date` | {message: 'User updated'
+DELETE | /medical/:userId      | YES   | admin | Delete one user Medical Info       |                                                   | {message: 'User deleted'}
+DELETE | /medical/profile    | YES   | user | Delete own Medical Info       |                                                    | { message: 'Profile deleted' }
+
 
 ### Post Endpoints
 
