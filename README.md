@@ -1,4 +1,4 @@
-# tweeter-RB11
+# API
 
 ### Authentication Endpoints
 
@@ -8,7 +8,7 @@ The Authentication flow for the application is:
 
 METHOD | ENDPOINT         | TOKEN | ROLE | DESCRIPTION              | POST PARAMS                                     | RETURNS
 -------|------------------|-------|------|--------------------|-------------------------------------------------|--------------------
-POST   | /auth/signup     | -     | user | User Signup              | `userName`, `email`, `password`, `address`, `birthDate` , `phone`, `zipCode`  | { token: `token` }
+POST   | /auth/signup     | -     | user | User Signup              | `firstName`,`lastName`, `email`, `password`, `phone`, `birth_Date` , `debut_date`  | { token: `token` }
 POST   | /auth/login      | -     | user | User Login               | `email`, `password`                             | { token: `token` }
 
 ### User Endpoints
