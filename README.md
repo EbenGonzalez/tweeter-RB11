@@ -15,7 +15,7 @@ POST   | /auth/login      | -     | user | User Login               | `email`, `
 
 METHOD | ENDPOINT         | TOKEN | ROLE | DESCRIPTION              | POST PARAMS                                     | RETURNS
 -------|------------------|-------|------|--------------------------|-------------------------------------------------|--------------------
-GET    | /user            | YES   | admin | Get All Users            |  `query params`                            | [{user}]
+GET    | /user            | YES   | <span style="color:red">admin</span> | Get All Users            |  `query params`                            | [{user}]
 GET    | /user/me    | YES   | user | Get Own Profile          |                                                |  {user}
 GET    | /user/:userId        | YES   | admin | Get One User             |                                             |  {user}
 POST   | /user            | YES   | admin | Create one user         |`firstName`,`lastName`, `email`, `password`, `phone`, `birth_Date` , `debut_date` | {user}
