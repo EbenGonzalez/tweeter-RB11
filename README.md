@@ -44,15 +44,15 @@ DELETE | /medical/profile    | YES   | user | Delete own Medical Info       |   
 METHOD | ENDPOINT         | TOKEN | ROLE | DESCRIPTION              | POST PARAMS                                     | RETURNS
 -------|------------------|-------|------|--------------------------|-------------------------------------------------|--------------------
 GET    | /ratio/me            | YES   | user | Calculate own ratio          |                             | { message: "Your ratio is:" }
-GET    | /ratio/id    | YES   | admin | Calculate user id ratio          |                                            | { message: "User id ratio is:" }
+GET    | /ratio/userId    | YES   | admin | Calculate user id ratio          |                                            | { message: "User id ratio is:" }
 GET    | /resistance/me       | YES   | user | Calculate own insulin resistance          |                                            | { message: "Your insulin resistance is:" }
-GET    | /resistance/id    | YES   | admin | Calculate user id insulin resistance   |                                            |  { message: "User id insulin resistance is:" }
+GET    | /resistance/userId    | YES   | admin | Calculate user id insulin resistance   |                                            |  { message: "User id insulin resistance is:" }
 GET    | /objetive/me            | YES   | user | Calculate own objetive          |                             | { message: + Objetive Image }
-GET    | /objetive/id    | YES   | admin | Calculate user id objetive         |                                            | { message: + Objetive Image }
+GET    | /objetive/userId    | YES   | admin | Calculate user id objetive         |                                            | { message: + Objetive Image }
 GET    | /objetive/all            | YES   | user | See the current objective of all users          |                             | [{user_objetive}]
 GET    | /ch/me            | YES   | user | Calculate total CH          |                             | { message: "The carbohydrates you have consumed are:" }
 GET    | /ch/id    | YES   | admin | Calculate user id total CH          |                                            | { message: "The carbohydrates user id have consumed are:" }
 GET    | /time/me            | YES   | user | Calculate how long user have been receiving treatment         |                             | { message: "You have been receiving treatment for:" }
-GET    | /time/id    | YES   | admin | Calculate how long (user id) have been receiving treatment|                                            | { message: "User id have been receiving treatment for:" }
+GET    | /time/userId    | YES   | admin | Calculate how long (user id) have been receiving treatment|                                            | { message: "User id have been receiving treatment for:" }
 
 
