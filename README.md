@@ -42,7 +42,7 @@ DELETE | /medical/profile    | YES   | user | Delete own Medical Info       |   
 
 METHOD | ENDPOINT         | TOKEN | ROLE | DESCRIPTION              | POST PARAMS                                     | RETURNS
 -------|------------------|-------|------|--------------------|-------------------------------------------------|--------------------
-GET   | /comment     | YES     | admin | Get all Comments              |  | [{comments}]
+GET   | /comment     | YES     | admin | Get all Comments              |  `query params`  | [{comments}]
 GET   | /comment/me     | YES      | user | Get own Comments               |                            | [{comments}]
 GET   | /comment/userId     | YES      | admin | Get user id Comments               |                            | [{comments}]
 POST   | /comment     | YES      | user | Create a comment              |  | {comment}
