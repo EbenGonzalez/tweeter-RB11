@@ -15,7 +15,7 @@ POST   | /auth/login      | -     | user | User Login               | `email`, `
 
 METHOD | ENDPOINT         | TOKEN | ROLE | DESCRIPTION              | POST PARAMS                                     | RETURNS
 -------|------------------|-------|------|--------------------------|-------------------------------------------------|--------------------
-GET    | /user            | YES   | <span style="color:red">admin</span> | Get All Users            |  `query params`                            | [{user}]
+GET    | /user            | YES   | admin | Get All Users            |  `query params`                            | [{user}]
 GET    | /user/me    | YES   | user | Get Own Profile          |                                                |  {user}
 GET    | /user/:userId        | YES   | admin | Get One User             |                                             |  {user}
 POST   | /user            | YES   | admin | Create one user         |`firstName`,`lastName`, `email`, `password`, `phone`, `birth_Date` , `debut_date` | {user}
@@ -29,7 +29,7 @@ DELETE | /user/me   | YES   | user | Delete own profile       |                 
 
 METHOD | ENDPOINT         | TOKEN | ROLE | DESCRIPTION              | POST PARAMS                                     | RETURNS
 -------|------------------|-------|------|--------------------------|-------------------------------------------------|--------------------
-GET    | /medical     | YES   | admin | Get All Users Medical Info           |  `query params`                            | [{medical_info}]
+GET    | /medical     | YES   | admin | Get All Users Medical Info           |  `query params` :mag_right:                          | [{medical_info}]
 GET    | /medical/profile    | YES   | user | Get Own Medical Info         |                                                |  {medical_info}
 GET    | /medical/:userId        | YES   | admin | Get One User Medical Info            |                                             |  {medical_info}
 POST   | /medical            | YES   | user | Create one user Medical Info        |`pump_model`, `basal_insulin`, `bolus_insulin`, `good_sv`, `high_sv`, `low_sv` , `breakfast`, `luch`, `snack`, `dinner`, `extra` | {medical_info}
