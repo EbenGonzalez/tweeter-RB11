@@ -38,8 +38,19 @@ PUT    | /medical/:userId       | YES   | admin | Update one user Medical Info  
 DELETE | /medical/:userId      | YES   | admin | Delete one user Medical Info       |                                                   | {message: 'Medical_info deleted'}
 DELETE | /medical/profile    | YES   | user | Delete own Medical Info       |                                                    | { message: 'Medical_info deleted' }
 
+### Comment Endpoints
 
-### Special Endpoints
+METHOD | ENDPOINT         | TOKEN | ROLE | DESCRIPTION              | POST PARAMS                                     | RETURNS
+-------|------------------|-------|------|--------------------|-------------------------------------------------|--------------------
+GET   | /comment     | YES     | admin | Get all Comments              |  | [{comments}]
+GET   | /comment/me     | YES      | user | Get own Comments               |                            | [{comments}]
+GET   | /comment/userId     | YES      | admin | Get user id Comments               |                            | [{comments}]
+POST   | /comment     | YES      | user | Create a comment              |  | {comment}
+PUT   | /comment/me    | YES      | user | Update own comment              |                            | {message: 'Your comment have been updated'}
+PUT   | /comment/commentId    | YES      | admin | Update a specific comment              |                            | {message: 'The comment have been updated'}
+DELETE   | /comment/commentId     | YES      | admin | Delete a specific comment             |                            | {message: 'Comment deleted'}
+
+### Utilities Endpoints
 
 METHOD | ENDPOINT         | TOKEN | ROLE | DESCRIPTION              | POST PARAMS                                     | RETURNS
 -------|------------------|-------|------|--------------------------|-------------------------------------------------|--------------------
