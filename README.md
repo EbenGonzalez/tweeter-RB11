@@ -53,17 +53,25 @@ PUT   | /comment/:commentId    | YES      | admin | Update a specific comment   
 DELETE   | /comment/me/:commentId    | YES      | user | Delete a specific comment             |                            | {message: 'Comment deleted'}
 DELETE   | /comment/:commentId     | YES      | admin | Delete a specific comment             |                            | {message: 'Comment deleted'}
 
+### Objetive Endpoints
+
+METHOD | ENDPOINT         | TOKEN | ROLE | DESCRIPTION              | POST PARAMS                                     | RETURNS
+-------|------------------|-------|------|--------------------|-------------------------------------------------|--------------------
+GET    | /objetive/me            | YES   | user | Calculate own objetive          |                             | { message: + Objetive Image }
+GET    | /objetive/:userId    | YES   | admin | Calculate user id objetive         |                                            | { message: + Objetive Image }
+GET    | /objetive/all            | YES   | user | See the current objective of all users          |                        | [{user_objetive}]
+GET    | /objetive/all/?            | YES   | user | See the current objective of all users filtered          |    `query params`              | [{user_objetive}]
+
 ### Utilities Endpoints
 
 METHOD | ENDPOINT         | TOKEN | ROLE | DESCRIPTION              | POST PARAMS                                     | RETURNS
 -------|------------------|-------|------|--------------------------|-------------------------------------------------|--------------------
+GET    | /insulin/me            | YES   | user | Calculate own total insulin          |                             | { message: "Your total insulin is:" }
+GET    | /insulin/userId    | YES   | admin | Calculate user id total insulin          |                                            | { message: "User id total insulin is:" }
 GET    | /ratio/me            | YES   | user | Calculate own ratio          |                             | { message: "Your ratio is:" }
 GET    | /ratio/userId    | YES   | admin | Calculate user id ratio          |                                            | { message: "User id ratio is:" }
 GET    | /resistance/me       | YES   | user | Calculate own insulin resistance          |                                            | { message: "Your insulin resistance is:" }
 GET    | /resistance/userId    | YES   | admin | Calculate user id insulin resistance   |                                            |  { message: "User id insulin resistance is:" }
-GET    | /objetive/me            | YES   | user | Calculate own objetive          |                             | { message: + Objetive Image }
-GET    | /objetive/userId    | YES   | admin | Calculate user id objetive         |                                            | { message: + Objetive Image }
-GET    | /objetive/all            | YES   | user | See the current objective of all users          |                             | [{user_objetive}]
 GET    | /ch/me            | YES   | user | Calculate total CH          |                             | { message: "The carbohydrates you have consumed are:" }
 GET    | /ch/id    | YES   | admin | Calculate user id total CH          |                                            | { message: "The carbohydrates user id have consumed are:" }
 GET    | /time/me            | YES   | user | Calculate how long user have been receiving treatment         |                             | { message: "You have been receiving treatment for:" }
