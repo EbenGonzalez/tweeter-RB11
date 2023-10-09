@@ -45,11 +45,13 @@ METHOD | ENDPOINT         | TOKEN | ROLE | DESCRIPTION              | POST PARAM
 -------|------------------|-------|------|--------------------|-------------------------------------------------|--------------------
 GET   | /comment     | YES     | admin | Get all Comments              |  `query params`  | [{comments}]
 GET   | /comment/me     | YES      | user | Get own Comments               |                            | [{comments}]
-GET   | /comment/userId     | YES      | admin | Get user id Comments               |                            | [{comments}]
+GET   | /comment/:userId     | YES      | admin | Get user id Comments               |                            | [{comments}]
 POST   | /comment     | YES      | user | Create a comment              |  | {comment}
-PUT   | /comment/me    | YES      | user | Update own comment              |                            | {message: 'Your comment have been updated'}
-PUT   | /comment/commentId    | YES      | admin | Update a specific comment              |                            | {message: 'The comment have been updated'}
-DELETE   | /comment/commentId     | YES      | admin | Delete a specific comment             |                            | {message: 'Comment deleted'}
+POST   | /comment/:userId   | YES      | admin | Create a comment              |  | {comment}
+PUT   | /comment/me/:commentId🥇    | YES      | user | Update own comment              |                            | {message: 'Your comment have been updated'}
+PUT   | /comment/:commentId    | YES      | admin | Update a specific comment              |                            | {message: 'The comment have been updated'}
+DELETE   | /comment/me/:commentId    | YES      | user | Delete a specific comment             |                            | {message: 'Comment deleted'}
+DELETE   | /comment/:commentId     | YES      | admin | Delete a specific comment             |                            | {message: 'Comment deleted'}
 
 ### Utilities Endpoints
 
