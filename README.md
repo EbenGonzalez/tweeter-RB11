@@ -32,7 +32,8 @@ METHOD | ENDPOINT         | TOKEN | ROLE | DESCRIPTION              | POST PARAM
 GET    | /medical     | YES   | admin | Get All Users Medical Info           |  `query params`                          | [{medical_info}]
 GET    | /medical/me   | YES   | user | Get Own Medical Info         |                                                |  {medical_info}
 GET    | /medical/:userId        | YES   | admin | Get One User Medical Info            |                                             |  {medical_info}
-POST   | /medical            | YES   | user | Create one user Medical Info        |`pump_model`, `basal_insulin`, `bolus_insulin`, `good_sv`, `high_sv`, `low_sv` , `breakfast`, `luch`, `snack`, `dinner`, `extra` | {medical_info}
+POST   | /medical            | YES   | user | Create own Medical Info        |`pump_model`, `basal_insulin`, `bolus_insulin`, `good_sv`, `high_sv`, `low_sv` , `breakfast`, `luch`, `snack`, `dinner`, `extra` | {medical_info}
+POST   | /medical/:userId           | YES   | admin | Create one user Medical Info        |`pump_model`, `basal_insulin`, `bolus_insulin`, `good_sv`, `high_sv`, `low_sv` , `breakfast`, `luch`, `snack`, `dinner`, `extra` | {medical_info}
 PUT    | /medical/me    | YES   | user | Update own Medical Info       |`pump_model`, `basal_insulin`, `bolus_insulin`, `good_sv`, `high_sv`, `low_sv` , `breakfast`, `luch`, `snack`, `dinner`, `extra`| {message: 'Medical info updated'}
 PUT    | /medical/:userId       | YES   | admin | Update one user Medical Info       |`pump_model`, `basal_insulin`, `bolus_insulin`, `good_sv`, `high_sv`, `low_sv` , `breakfast`, `luch`, `snack`, `dinner`, `extra` | {message: 'Medical_info updated'
 DELETE | /medical/:userId      | YES   | admin | Delete one user Medical Info       |                                                   | {message: 'Medical_info deleted'}
