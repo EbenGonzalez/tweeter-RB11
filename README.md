@@ -48,7 +48,7 @@ GET   | /comment/me     | YES      | user | Get own Comments               |    
 GET   | /comment/:userId     | YES      | admin | Get user id Comments               |                            | [{comments}]
 POST   | /comment     | YES      | user | Create a comment              |  | {comment}
 POST   | /comment/:userId   | YES      | admin | Create a comment              |  | {comment}
-PUT   | /comment/me/:commentId🥇    | YES      | user | Update own comment              |                            | {message: 'Your comment have been updated'}
+PUT   | /comment/me/:commentId    | YES      | user | Update own comment              |                            | {message: 'Your comment have been updated'}
 PUT   | /comment/:commentId    | YES      | admin | Update a specific comment              |                            | {message: 'The comment have been updated'}
 DELETE   | /comment/me/:commentId    | YES      | user | Delete a specific comment             |                            | {message: 'Comment deleted'}
 DELETE   | /comment/:commentId     | YES      | admin | Delete a specific comment             |                            | {message: 'Comment deleted'}
